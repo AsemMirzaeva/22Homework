@@ -21,4 +21,13 @@ func main(){
 		log.Fatal(err)
 	}
 	
+	useremail, err := g.GetUserEmail()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	_, err = file.WriteString(useremail + "\n")
+	if err != nil{
+		log.Fatal(err)
+	}
 }
